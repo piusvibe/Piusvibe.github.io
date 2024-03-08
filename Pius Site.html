@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1 {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .w3-row-padding img {
+            margin-bottom: 12px;
+        }
+
+        .bgimg {
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #f5f5dc;
+            min-height: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+            background-image: url('https://www.w3schools.com/w3images/profile_girl.jpg');
+        }
+
+        .w3-main {
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            padding: 64px;
+        }
+
+        .w3-sidebar {
+            width: 40%;
+        }
+
+        .w3-sidebar.w3-hide-medium.w3-hide-small {
+            display: none;
+        }
+
+        .w3-sidebar.w3-black.w3-animate-right.w3-xxlarge {
+            display: none;
+        }
+
+        /* Updated styles for photo grid */
+        .w3-half {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .w3-half img {
+            width: 100%;
+            height: auto;
+            transition: 0.5s;
+        }
+
+        .w3-half:hover img {
+            filter: brightness(70%);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: 0.5s;
+            background-color: rgba(255, 255, 255, 0.8); /* Light overlay color with slight change */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .w3-half:hover .overlay {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .overlay a {
+            color: black;
+            text-decoration: none;
+            font-size: 24px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar with image -->
+    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+        <div class="bgimg"></div>
+    </nav>
+
+    <!-- Hidden Sidebar (reveals when clicked on the menu icon)-->
+    <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2"
+        id="mySidebar">
+        <a href="javascript:void(0)" onclick="closeNav()"
+            class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">Home</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">Projects</a>
+            <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">About Me</a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="w3-main w3-padding-large" style="margin-left:40%">
+
+        <!-- Menu icon to open sidebar -->
+        <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black"
+            style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+        <!-- Header -->
+        <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+            <h1 class="w3-jumbo"><b>Pius Amartey</b></h1>
+            <img src="unnamed.jpg" class="w3-image w3-hide-large w3-hide-small w3-round"
+                style="display:block;width:60%;margin:auto;">
+            <img src="unnamed.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+                <a href="Pius Amartey CV.docx" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-download"></i> Download CV
+                </a>
+            </button>
+        </header>
+
+        <!-- Portfolio Section -->
+        <div class="w3-padding-32 w3-content" id="portfolio">
+            <h2 class="w3-text-grey">Projects</h2>
+            <hr class="w3-opacity">
+
+            <!-- Grid for photos -->
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half">
+                    <div class="overlay">
+                        <a href="https://example.com/project1">Project 1</a>
+                    </div>
+                    <img src="unnamed.jpg" style="width:100%" alt="Project 1">
+                </div>
+                <div class="w3-half">
+                    <div class="overlay">
+                        <a href="https://example.com/project2">Project 2</a>
+                    </div>
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" alt="Project 2">
+                </div>
+                <!-- Add other projects similarly -->
+            </div>
+            <!-- End photo grid -->
+        </div>
+
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+            <h2>About</h2>
+            <hr class="w3-opacity">
+            <p>Some text about me...</p>
+            <h3 class="w3-padding-16">My Skills</h3>
+            <p class="w3-wide">Web Development</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">intermediate</div>
+            </div>
+            <p class="w3-wide">Information Systems Management</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">intermediate</div>
+            </div>
+            <p class="w3-wide">Python, C++, JavaScript, Java</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">intermediate</div>
+            </div>
+            <p class="w3-wide">Database(SQL)</p>
+            <div class="w3-light-grey">
+                <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">intermediate</div>
+            </div>
+            <br>
+        </div>
+
+    </div>
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-small">My Links</p>
+        <a class="w3-button w3-round-xxlarge w3-small w3-dark-grey" href="https://www.w3schools.com/spaces"
+            target="_blank">CV</a>
+        <!-- End footer -->
+    </footer>
+
+    <script>
+        // Open and close sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "60%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
