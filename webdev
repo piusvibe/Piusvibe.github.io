@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, white 30%, beige 30%);
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bgimg {
+            display: none; /* Hide the background image */
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #f5f5dc;
+            min-height: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+        }
+
+        /* Rest of the styles remain unchanged */
+        .w3-row-padding img {
+            margin-bottom: 12px;
+        }
+
+        .w3-main {
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            padding: 64px;
+        }
+
+        .w3-row-padding img:hover {
+            filter: brightness(90%);
+        }
+
+        .w3-ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Style for the bullet point */
+        .w3-ul li:before {
+            content: "\2022"; /* Bullet point character */
+            color: #555; /* Bullet point color */
+            font-size: 20px;
+            margin-right: 10px; /* Adjust the distance between bullet points and text */
+        }
+
+        .w3-sidebar {
+            width: 40%;
+        }
+
+        .w3-sidebar.w3-hide-medium.w3-hide-small {
+            display: none;
+        }
+
+        .w3-sidebar.w3-black.w3-animate-right.w3-xxlarge {
+            display: none;
+        }
+
+        .w3-circular-image {
+            width: 150px; /* Adjust the width as needed */
+            height: 150px; /* Adjust the height as needed */
+            object-fit: cover;
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        /* Styles for the "Go back" link */
+        .go-back {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 18px;
+        z-index: 3;
+        text-decoration: none;
+        color: #fff; /* Text color */
+        background-color: #795548; /* Button background color */
+        padding: 10px 20px; /* Padding for the button */
+        border-radius: 5px; /* Rounded corners */
+    }
+
+    /* Hover effect */
+    .go-back:hover {
+        background-color: #6d4c41; /* Darker background color on hover */
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- "Go back" link -->
+    <a href="https://mi-linux.wlv.ac.uk/~1928477/Weather%20Page/pius.html" class="go-back">Go back</a>
+
+    <!-- Sidebar with image -->
+    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+        <div class="bgimg"></div>
+    </nav>
+
+    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+    <nav class="w3-sidebar w3-brown w3-animate-right w3-xxlarge"
+    style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()"
+        class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+        <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+        <a href="https://mi-linux.wlv.ac.uk/~1928477/Weather Page/pius.html" class="w3-bar-item w3-button w3-text-beige w3-hover-beige"
+            onclick="closeNav()">Home</a>
+        <a href="https://mi-linux.wlv.ac.uk/~1928477/Weather%20Page/pius.html#portfolio" class="w3-bar-item w3-button w3-text-beige w3-hover-beige"
+            onclick="closeNav()">Projects</a>
+        <a href="about.html" class="w3-bar-item w3-button w3-text-beige w3-hover-beige"
+            onclick="closeNav()">About Me</a>
+    </div>
+</nav>
+
+    <!-- Page Content -->
+    <div class="w3-main w3-padding-large" style="margin-left:40%">
+
+        <!-- Menu icon to open sidebar -->
+        <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black"
+            style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+        <!-- Header -->
+        <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+            <h1 class="w3-jumbo"><b>Pius Amartey</b></h1>
+			
+        </header>
+
+        
+        <!-- About Section -->
+        <div>
+    <h2>Web Development</h2>
+    
+    <button onclick="window.location.href='https://mi-linux.wlv.ac.uk/~1928477/vibe/public/';" class="w3-button w3-brown" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='inherit'">
+    Click To View Website
+</button>
+<hr class="w3-opacity">
+	
+	<div style="font-size: 22px;">
+    <p>The "Vibe Kitchen Blogs" project is a web application designed to provide a platform for users to create,
+	   manage, and share culinary content. It facilitates the creation of blog posts that include recipes, cooking tips,
+	   and food-related articles. Users can register and sign in to the platform to access features such as creating new posts, editing existing posts, and viewing posts shared by other users.</p>
+</div>
+
+        <!-- Grid for photos -->
+        <div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half">
+                <img src="blog.jpg" style="width:100%; height:300px;" onclick="window.location.href='https://mi-linux.wlv.ac.uk/~1928477/Weather%20Page/arduino.html';" alt="Project 1">
+                <img src="blog2.jpg" style="width:100%; height:300px;" onclick="window.location.href='new_project2.html';" alt="Project 2">
+                <img src="blog3.jpg" style="width:100%; height:300px;" onclick="window.location.href='new_project3.html';" alt="Project 3">
+            </div>
+
+            <div class="w3-half">
+                <img src="papa.jpg" style="width:100%; height:300px;" onclick="window.location.href='new_project4.html';" alt="Project 4">
+                <img src="base.jpg" style="width:100%; height:370px;" onclick="window.location.href='new_project5.html';" alt="Project 5">
+            </div>
+            <!-- End photo grid -->
+        </div>
+        <!-- End Portfolio Section -->
+<h3 class="w3-padding-16" style="font-size: 28px;">Skills</h3>
+<ul class="w3-ul w3-card-4">
+    <li style="font-size: 18px;">Frontend: HTML, CSS, Bootstrap 5 (for styling and layout), JavaScript (with jQuery for DOM manipulation).</li>
+	<li style="font-size: 18px;">Backend: PHP (for server-side scripting), MySQL (for database management).</li>
+    <li style="font-size: 18px;">Web Technologies: Emerging web technologies, including HTML5, CSS3, JavaScript (with frameworks like jQuery), AJAX, and responsive web design.</li>
+    <li style="font-size: 18px;">Service Oriented Architectures (SOA): Designing and implementing service-oriented architectures for building scalable and maintainable web applications.</li>
+    <li style="font-size: 18px;">Security Practices: Knowledge about web security best practices, including data validation, authentication, authorization, encryption, and protection.</li>
+    <li style="font-size: 18px;">PHP Development: CodeIgniter being a PHP framework, gaining proficiency in PHP programming, including understanding PHP syntax, variables, data types, and functions.</li>
+	<li style="font-size: 18px;">Frameworks/Libraries: Bootstrap (for responsive design components), jQuery (for AJAX requests and event handling).</li>
+</ul>
+
+        <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top: 20px;">
+            <a href="https://www.linkedin.com/in/pius-amartey-25b38b1a0" target="_blank" style="text-decoration: none; color: inherit;">
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+                <p class="w3-small">My Linkedin</p>
+            </a>
+            <a class="w3-button w3-round-xxlarge w3-small w3-dark-grey" href="https://www.w3schools.com/spaces" target="_blank">CV</a>
+            <!-- End footer -->
+        </footer>
+    </div>
+
+    <script>
+        // Open and close sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "60%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
