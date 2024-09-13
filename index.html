@@ -1,204 +1,177 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>W3.CSS Template</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+    rel="stylesheet">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-    background: linear-gradient(to right, white 30%, beige 30%);
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
-}
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>BrightBlog Site</title> <!-- UPDATED -->
 
-.bgimg {
-    display: none; /* Hide the background image */
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #f5f5dc;
-    min-height: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-}
-
-/* Rest of the styles remain unchanged */
-.w3-row-padding img {
-    margin-bottom: 12px;
-}
-
-.w3-main {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    padding: 64px;
-}
-.w3-row-padding img:hover {
-            filter: brightness(90%);
-}
-
-.w3-sidebar {
-    width: 40%;
-}
-
-.w3-sidebar.w3-hide-medium.w3-hide-small {
-    display: none;
-}
-
-.w3-sidebar.w3-black.w3-animate-right.w3-xxlarge {
-    display: none;
-}
-
-.w3-circular-image {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed */
-    object-fit: cover;
-    clip-path: circle(50% at 50% 50%);
-}
-    </style>
 </head>
-
 <body>
+    <header id="main-header">
+        <h1 id="logo">BrightBlog</h1>
+        <nav>
+            <ul id="nav-ul"> <!-- Add the id here -->
 
-    <!-- Sidebar with image -->
-    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-        <div class="bgimg"></div>
-    </nav>
-
-    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-    <nav class="w3-sidebar w3-brown w3-animate-right w3-xxlarge"
-        style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-        <a href="javascript:void(0)" onclick="closeNav()"
-            class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-            <i class="fa fa-remove"></i>
-        </a>
-        <div class="w3-bar-block w3-center">
-            <a href="#" class="w3-bar-item w3-button w3-text-beige w3-hover-beige"
-                onclick="closeNav()">Home</a>
-            <a href="#portfolio" class="w3-bar-item w3-button w3-text-beige w3-hover-beige"
-                onclick="closeNav()">Projects</a>
-            <a href="#about" class="w3-bar-item w3-button w3-text-beige w3-hover-beige"
-                onclick="closeNav()">About Me</a>
-        </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="w3-main w3-padding-large" style="margin-left:40%">
-
-        <!-- Menu icon to open sidebar -->
-        <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black"
-            style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
-        <!-- Header -->
-        <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-            <h1 class="w3-jumbo"><b>Pius Amartey</b></h1>
-            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-                <a href="Pius Amart CV.docx" target="_blank" rel="noopener noreferrer">
-                    <i class="fa fa-download"></i> Download CV
-                </a>
-            </button>
-        </header>
-
-        <!-- Portfolio Section -->
-<div class="w3-padding-32 w3-content" id="portfolio">
-    <h2 class="w3-text-black" style="font-size: 48px;">
-        <a href="https://example.com/your-different-page.html" 
-           style="text-decoration: none; color: inherit;"
-           onmouseover="this.style.color='#ff9900'"
-           onmouseout="this.style.color='inherit'">
-           Projects
-        </a>
-    </h2>
-    <p>Explore my projects below:</p>
-    <hr class="w3-opacity">
-
-            <!-- Grid for photos -->
-<div class="w3-row-padding" style="margin:0 -16px">
-    <div class="w3-half">
-        <img src="bigdata.jpg" style="width:100%; height:300px;" onclick="window.location.href='https://piusvibe.github.io/bigdata.html';" alt="Project 1">
-        <img src="iot.jpg" style="width:100%; height:300px;" onclick="window.location.href='https://piusvibe.github.io/internetofthings.html';" alt="Project 2">
-        <img src="internet.jpg" style="width:100%; height:300px;" onclick="window.location.href='https://piusvibe.github.io/webdev.html';" alt="Project 3">
-    </div>
-
-    <div class="w3-half">
-        <img src="ard.jpg" style="width:100%; height:350px;" onclick="window.location.href='https://piusvibe.github.io/arduino';" alt="Project 4">
-        <img src="sqll.jpeg" style="width:100%; height:370px;" onclick="window.location.href='https://piusvibe.github.io/data.html';" alt="Project 5">
-    </div>
-    <!-- End photo grid -->
-</div>
-<!-- End Portfolio Section -->
-        </div>
-
-        <!-- About Section -->
-<div class="w3-content w3-justify w3-text-black w3-padding-32" id="about">
-    <h2>About Me</h2>
-    <hr class="w3-opacity">
-	<!-- Circular Image -->
-    <div class="w3-center">
-        <img src="unnamed.jpg" class="w3-round w3-margin-top w3-circular-image" alt="Profile Image">
-    </div>
-<div style="font-size: 22px;">
-    <p>Recent First-Class Honors graduate in Computing and IT from the University of Wolverhampton,
-	skilled in advanced web development, big data analysis, database management, and server administration. 
-	Eager to leverage this expertise in a dynamic IT role, passionate about utilizing modern technologies to solve challenges.
-	Dedicated to continuous learning and improvement. 
-	I thrive on exploring innovative tech solutions and adapting to evolving environments to create impactful outcomes.
-    </p>
-
+              <li><a href="" class="navbutton">Home</a></li>
+              <li><a href="" class="navbutton">About us</a></li>
+              <li><a href="" class="navbutton">Blog</a></li>
+           </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="main-content">
+            <aside>
+                <section>
+                    <h4>Filter by Month</h4>
+                    <nav>
+                        <ul>
+                            <li><a href=""></a>Filter for January</li>
+                            <li><a href=""></a>Filter for Febuary</li>
+                            <li><a href=""></a>Filter for March</li>
+                        </ul>
+                    </nav>
+                </section>
+                <section>
+                    <h4>Filter by Category</h4>
+                    <nav>
+                        <ul>
+                            <li><a href=""></a>Puppies</li>
+                            <li><a href=""></a>Dogs</li>
+                            <li><a href=""></a>Cats</li>
+                            <li><a href=""></a>Tiger</li>
+                        </ul>
+                    </nav>                 
+                </section>
+            </aside>
+            <div>
+          
+                <article>
+                    <header>
+                     <!-- Article's header goes here -->   
+                     <h2>Ten amusing Facts About Dogs</h2>
+                     <h3>Read time: 5 minutes</h3> 
+                    </header>
+                    <main>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, 
+                            ullam assumenda? Facere, aut atque. Velit iste nemo repellendus hic 
+                            corporis nobis possimus placeat optio minus. Hic ipsa sapiente tempore consequatur! 
+                            Mollitia sunt, quod itaque placeat velit nobis molestiae dolorem harum perspiciatis eveniet 
+                            nulla atque a, minima minus iusto deserunt fuga sapiente suscipit blanditiis saepe quas sed? 
+                            Quibusdam esse quos quae qui error vitae ipsum totam nesciunt, eos blanditiis quaerat? 
+                            Non veniam commodi neque explicabo asperiores architecto recusandae consequuntur, esse iusto aliquam, 
+                            sapiente nemo, vel nulla ea voluptate a incidunt perspiciatis repellat 
+                            ab tempora autem aut dolorem. Debitis facilis velit ipsum.</p>
+                            <blockquote>
+                                <cite>"I love puppies!" - Pius, 2024</cite>
+                            </blockquote>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo magnam doloremque earum quam saepe quidem 
+                                iusto ea aspernatur reiciendis, repellendus corporis. Ratione distinctio illo qui inventore earum 
+                                eveniet quidem nostrum eligendi dolor. Nobis excepturi itaque ipsa ad reiciendis! Asperiores est quos vel? 
+                                Neque harum perspiciatis consequatur ab quos modi, pariatur facilis dolore culpa alias non, quis expedita tenetur 
+                                asperiores voluptate labore repudiandae veritatis maiores, ullam nisi aliquam cum! Illo velit atque animi temporibus 
+                                quod saepe enim, incidunt corrupti aliquam culpa!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste asperiores harum dolores nostrum reiciendis 
+                                    deserunt perferendis magni, ad quis molestias quisquam possimus libero minima in. 
+                                    Exercitationem quibusdam rem praesentium qui neque, sit odit reiciendis, minima temporibus 
+                                    iste necessitatibus aliquam aspernatur! In dolores dolorem facilis maiores a mollitia voluptatem 
+                                    inventore quos quasi, architecto nihil temporibus nulla eos! Neque voluptate ullam et consequuntur 
+                                    eum deleniti culpa vel, beatae, pariatur mollitia vero nesciunt, maxime obcaecati provident repellat 
+                                    dignissimos repellendus laudantium reprehenderit asperiores nemo est sint. Exercitationem excepturi 
+                                    explicabo id ullam, fugiat sequi saepe sed odio tempora ducimus ratione cum autem cupiditate quo 
+                                    inventore porro fuga neque asperiores. Deserunt officia nihil totam voluptatem natus, accusantium placeat 
+                                    dolorum illum vitae libero quam error, est eos dolore unde magni consequuntur distinctio iste blanditiis dicta? Magnam 
+                                    ad dolore facilis nulla quos nesciunt, deleniti eos nostrum voluptatum repellendus eum ea a numquam corporis, pariatur 
+                                    asperiores qui sequi possimus.</p>
+                    </main>
+                    <footer>
+                        <h2>Author: Zsolt Podoba-Szalai</h2>
+                        <img src="https://placebear.com/100/100" alt="A Bear">
+                        <h3>Last posted: 01-08-2024</h3>
+                        <a href="https://www.brightnetwork.co.uk/">Author's profile</a>
+                    </footer>
+                </article>
     
-            <h3 class="w3-padding-16">My Skills</h3>
-            <p class="w3-wide">Web Development </p>
-            <div class="w3-light-grey">
-                <div class="w3-container w3-center w3-padding-small w3-dark-grey"
-                    style="width:95%">intermediate</div>
             </div>
-            <p class="w3-wide">Informations Systems Managment</p>
-            <div class="w3-light-grey">
-                <div class="w3-container w3-center w3-padding-small w3-dark-grey"
-                    style="width:85%">intermediate</div>
-            </div>
-            <p class="w3-wide">Python, C++, JavaScript, Java</p>
-            <div class="w3-light-grey">
-                <div class="w3-container w3-center w3-padding-small w3-dark-grey"
-                    style="width:80%">intermediate</div>
-            </div>
-            <p class="w3-wide">Database(SQL)</p>
-            <div class="w3-light-grey">
-                <div class="w3-container w3-center w3-padding-small w3-dark-grey"
-                    style="width:80%">intermediate</div>
-            </div><br>
+
         </div>
+       
+        
 
-    </div>
+        <!-- Our main content will go here -->
+    
+        <hr>
+        <h2>Sign up for the newsletter</h2>
+        <form action="" method="">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required> 
+        <br>
 
-    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top: 20px;">
-    <a href="https://www.linkedin.com/in/pius-amartey-25b38b1a0" target="_blank" style="text-decoration: none; color: inherit;">
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-        <p class="w3-small">My Linkedin</p>
-    </a>
-    <a class="w3-button w3-round-xxlarge w3-small w3-dark-grey" href="Pius Amart CV.docx" target="_blank">CV</a>
-    <!-- End footer -->
-</footer>
-</footer>
-    <!-- END PAGE CONTENT -->
-    </div>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        <br>
 
-    <script>
-        // Open and close sidebar
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "60%";
-            document.getElementById("mySidebar").style.display = "block";
-        }
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
 
-        function closeNav() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
-    </script>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <br>
+        
+        <label for="favourite_animal">Favourite Animal:</label>
+        <input type="radio" name="favourite_animal" id="dog" value="dog">
+        <label for="dog">Dog</label>
+        <input type="radio" name="favourite_animal" id="cat" value="cat">
+        <label for="cat">Cat</label>
+        <input type="radio" name="favourite_animal" id="horse" value="horse">
+        <label for="horse">Horse</label>
+        <br>
 
-</body>
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="england">England</option>
+            <option value="scotland">Scotland</option>
+            <option value="wales">Wales</option>
+            <option value="northern_ireland">Northern Ireland</option>
+        </select>
+        <br>
+        <label for="bio">Biography:</label>
+        <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
 
+         <input type="checkbox" id="subscribe" name="subscribe">
+         <label for="subscribe">Subscribe to our newsletter!</label>
+         <br>
+
+         <input type="submit" value="Send!">
+    </form>
+        <hr>
+    
+    </main>
+    <footer>
+        <h2>BrightBlogSite</h2>
+        <section>
+            <nav>
+                <ul id="footer-ul">
+                   <div>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Careers</a></li>
+                  </div>
+
+                  <div>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                  </div>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+   </body>
 </html>
