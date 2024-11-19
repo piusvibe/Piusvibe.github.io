@@ -98,7 +98,7 @@
 <body>
 
     <!-- "Go back" link -->
-    <a href="https://mi-linux.wlv.ac.uk/~1928477/Weather%20Page/pius.html" class="go-back">Go back</a>
+    <a href="https://piusvibe.github.io/" class="go-back">Go back</a>
 
     <!-- Sidebar with image -->
     <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
